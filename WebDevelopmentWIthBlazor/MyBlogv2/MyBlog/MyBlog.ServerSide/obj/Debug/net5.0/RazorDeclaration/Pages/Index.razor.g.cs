@@ -83,6 +83,13 @@ using MyBlog.ServerSide.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 13 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\_Imports.razor"
+using Microsoft.AspNetCore.Components.Web.Extensions.Head;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Pages\Index.razor"
 using MyBlog.Data.Interfaces;
 
@@ -105,19 +112,23 @@ using MyBlog.Data.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 19 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Pages\Index.razor"
+#line 18 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Pages\Index.razor"
        
-	protected List<BlogPost> posts = new();
-
-	protected override async Task OnInitializedAsync()
+	public int TotalBlogPosts { get; set; }
+	private async ValueTask<ItemsProviderResult<BlogPost>> LoadPosts(ItemsProviderRequest request)
 	{
-		posts = await api.GetBlogPostsAsync(10, 0);
-		await base.OnInitializedAsync();
+		if (TotalBlogPosts == 0)
+		{
+			TotalBlogPosts = await api.GetBlogPostCountAsync();
+		}
+		var numBlogPosts = Math.Min(request.Count, TotalBlogPosts - request.StartIndex);
+		var employees = await api.GetBlogPostsAsync(numBlogPosts, request.StartIndex);
+		return new ItemsProviderResult<BlogPost>(employees, TotalBlogPosts);
 	}
 
 	protected async Task AddSomePosts()
 	{
-		for(int i = 0; i <= 10; i++)
+		for(int i = TotalBlogPosts; i <= TotalBlogPosts+10; i++)
 		{
 			await api.SaveBlogPostAsync(new BlogPost()
 			{
@@ -126,7 +137,7 @@ using MyBlog.Data.Models;
 				Text = "Text"
 			});
 		}
-		base.StateHasChanged();
+		TotalBlogPosts += 10;
 	}
 
 #line default

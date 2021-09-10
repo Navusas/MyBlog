@@ -103,15 +103,8 @@ using Microsoft.AspNetCore.Components.Web.Extensions.Head;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Pages\FetchData.razor"
-using MyBlog.ServerSide.Data;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
-    public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/post/{BlogPostId:int}")]
+    public partial class Post : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -119,19 +112,23 @@ using MyBlog.ServerSide.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Pages\FetchData.razor"
+#line 13 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Pages\Post.razor"
        
-    private WeatherForecast[] forecasts;
 
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
-    }
+	[Parameter] public int BlogPostId { get; set; }
+	public BlogPost BlogPost { get; set; }
+
+	protected async override Task OnParametersSetAsync()
+	{
+		BlogPost = await api.GetBlogPostAsync(BlogPostId);
+		await base.OnParametersSetAsync();
+	}
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private WeatherForecastService ForecastService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager navman { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IMyBlogApi api { get; set; }
     }
 }
 #pragma warning restore 1591

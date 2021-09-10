@@ -103,15 +103,8 @@ using Microsoft.AspNetCore.Components.Web.Extensions.Head;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Pages\FetchData.razor"
-using MyBlog.ServerSide.Data;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
-    public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Setfocus")]
+    public partial class SetFocus : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -119,19 +112,13 @@ using MyBlog.ServerSide.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Pages\FetchData.razor"
+#line 6 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Pages\SetFocus.razor"
        
-    private WeatherForecast[] forecasts;
-
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
-    }
+	ElementReference textInput;
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private WeatherForecastService ForecastService { get; set; }
     }
 }
 #pragma warning restore 1591

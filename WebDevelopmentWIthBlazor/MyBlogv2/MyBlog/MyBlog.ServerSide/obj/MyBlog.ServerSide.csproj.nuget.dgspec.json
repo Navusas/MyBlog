@@ -124,6 +124,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Components.Web.Extensions": {
+              "target": "Package",
+              "version": "[5.0.0-preview9.20513.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.9, )"

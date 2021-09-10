@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace MyBlog.ServerSide.Pages
+namespace MyBlog.ServerSide.Components
 {
     #line hidden
     using System;
@@ -103,15 +103,7 @@ using Microsoft.AspNetCore.Components.Web.Extensions.Head;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Pages\FetchData.razor"
-using MyBlog.ServerSide.Data;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
-    public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Alert : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -119,19 +111,37 @@ using MyBlog.ServerSide.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Pages\FetchData.razor"
+#line 5 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Components\Alert.razor"
        
-    private WeatherForecast[] forecasts;
+	public enum AlertStyle {
+		Primary,
+		Secondary,
+		Success,
+		Danger,
+		Warning,
+		Info,
+		Light,
+		Dark
+	}
 
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
-    }
+	[Parameter] public AlertStyle Style { get; set; }
+
+	[Parameter] public RenderFragment ChildContent { get; set; }
+	= 
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private WeatherForecastService ForecastService { get; set; }
+        (__builder2) => {
+            __builder2.AddMarkupContent(0, "<b>This is a default value</b>");
+        }
+#nullable restore
+#line 20 "C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\Components\Alert.razor"
+                                     ;
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

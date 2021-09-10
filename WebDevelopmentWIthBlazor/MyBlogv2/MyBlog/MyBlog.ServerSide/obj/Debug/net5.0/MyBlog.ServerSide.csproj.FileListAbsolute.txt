@@ -86,3 +86,12 @@ C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSid
 C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\obj\Debug\net5.0\Razor\Pages\Counters\Counter.razor.g.cs
 C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\obj\Debug\net5.0\RazorDeclaration\Pages\Counters\CustomCounter.razor.g.cs
 C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\obj\Debug\net5.0\Razor\Pages\Counters\CustomCounter.razor.g.cs
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\obj\Debug\net5.0\RazorDeclaration\Components\Alert.razor.g.cs
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\obj\Debug\net5.0\Razor\Components\Alert.razor.g.cs
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\obj\Debug\net5.0\RazorDeclaration\Pages\AlertTest.razor.g.cs
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\obj\Debug\net5.0\Razor\Pages\AlertTest.razor.g.cs
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\obj\Debug\net5.0\RazorDeclaration\Pages\SetFocus.razor.g.cs
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\obj\Debug\net5.0\Razor\Pages\SetFocus.razor.g.cs
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\obj\Debug\net5.0\RazorDeclaration\Pages\Post.razor.g.cs
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\obj\Debug\net5.0\Razor\Pages\Post.razor.g.cs
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Web.Extensions.dll

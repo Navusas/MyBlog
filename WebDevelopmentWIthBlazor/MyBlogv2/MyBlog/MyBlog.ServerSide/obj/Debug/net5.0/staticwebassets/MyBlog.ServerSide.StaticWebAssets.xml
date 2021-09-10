@@ -1,3 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
   <ContentRoot BasePath="/" Path="C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.ServerSide\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/Microsoft.AspNetCore.Components.Web.Extensions" Path="C:\Users\domantas.giedraitis\.nuget\packages\microsoft.aspnetcore.components.web.extensions\5.0.0-preview9.20513.1\build\..\staticwebassets\" />
 </StaticWebAssets>
