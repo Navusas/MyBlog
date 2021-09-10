@@ -1,0 +1,41 @@
+﻿@page "/counters/"
+
+<div class="row">
+    <div class="col text-left">
+        <button class="btn btn-secondary" @onclick="ResetCounter">Reset</button>
+	</div>
+    <div class="col text-left">
+        <button class="btn btn-primary" @onclick="IncrementCount">Increment Default</button>
+	</div>
+    <div class="col text-left">
+       <button class="btn btn-danger" @onclick="ToggleCustomCounter">@(showCustomCounter ? "Hide" : "Show") Custom Counter</button>
+	</div>
+</div>
+
+<h3 class="my-4">Current count: @overallCount</h3>
+
+@if(showCustomCounter)
+{
+    <div class="my-3 col-3">
+        <div class="row">
+            <div class="col">
+                <input type="number" class="form-control" placeholder="Increments" @bind="customCounterIncrements"/>
+            </div>
+        </div>
+	</div>
+
+
+    <CustomCounter Increments="@customCounterIncrements" @bind-CurrentCount="@overallCount"></CustomCounter>    
+}
+
+
+@code {
+    private int overallCount = 0;
+
+    private bool showCustomCounter = false;
+    private int customCounterIncrements = 20;
+
+    private void ToggleCustomCounter() => showCustomCounter = !showCustomCounter;
+    private void IncrementCount() => overallCount += 1;
+    private void ResetCounter() => overallCount = 0;
+}

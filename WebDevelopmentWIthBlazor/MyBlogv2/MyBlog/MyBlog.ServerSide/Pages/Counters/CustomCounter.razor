@@ -1,0 +1,17 @@
+﻿@page "/counters/custom"
+
+<h3>Custom Counter</h3>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Go go go!</button>
+
+@code {
+    [Parameter] public EventCallback<int> CurrentCountChanged { get; set; }
+    [Parameter] public int CurrentCount { get; set; } = 0;
+    [Parameter] public int Increments { get; set; } = 1;
+
+    private void IncrementCount()
+    {
+        CurrentCount+=Increments;
+        CurrentCountChanged.InvokeAsync(CurrentCount);
+    }
+}

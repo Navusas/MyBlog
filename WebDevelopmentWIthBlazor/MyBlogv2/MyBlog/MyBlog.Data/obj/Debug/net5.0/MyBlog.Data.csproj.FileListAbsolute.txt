@@ -1,0 +1,15 @@
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\obj\Debug\net5.0\MyBlog.Data.csproj.AssemblyReference.cache
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\obj\Debug\net5.0\MyBlog.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\obj\Debug\net5.0\MyBlog.Data.AssemblyInfoInputs.cache
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\obj\Debug\net5.0\MyBlog.Data.AssemblyInfo.cs
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\obj\Debug\net5.0\MyBlog.Data.csproj.CoreCompileInputs.cache
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\bin\Debug\net5.0\MyBlog.Data.deps.json
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\bin\Debug\net5.0\MyBlog.Data.runtimeconfig.json
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\bin\Debug\net5.0\MyBlog.Data.runtimeconfig.dev.json
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\bin\Debug\net5.0\MyBlog.Data.dll
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\bin\Debug\net5.0\MyBlog.Data.pdb
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\obj\Debug\net5.0\MyBlog.Data.dll
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\obj\Debug\net5.0\ref\MyBlog.Data.dll
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\obj\Debug\net5.0\MyBlog.Data.pdb
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\obj\Debug\net5.0\MyBlog.Data.genruntimeconfig.cache
+C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\bin\Debug\net5.0\ref\MyBlog.Data.dll

@@ -1,0 +1,41 @@
+﻿@page "/"
+
+@using MyBlog.Data.Interfaces;
+@using MyBlog.Data.Models;
+@inject IMyBlogApi api
+
+<button class="btn btn-primary" @onclick="AddSomePosts">Add some fake posts</button>
+
+<br />
+<br />
+
+<ul>
+	@foreach(var post in posts)
+	{
+		<li>@post.Title</li>
+	}
+</ul>
+
+@code {
+	protected List<BlogPost> posts = new();
+
+	protected override async Task OnInitializedAsync()
+	{
+		posts = await api.GetBlogPostsAsync(10, 0);
+		await base.OnInitializedAsync();
+	}
+
+	protected async Task AddSomePosts()
+	{
+		for(int i = 0; i <= 10; i++)
+		{
+			await api.SaveBlogPostAsync(new BlogPost()
+			{
+				PublishDate = DateTime.Now,
+				Title = $"Blog post {i}",
+				Text = "Text"
+			});
+		}
+		base.StateHasChanged();
+	}
+}

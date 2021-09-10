@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MyBlog.Data</id>
+    <version>1.0.0</version>
+    <authors>MyBlog.Data</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Dev\10percent\Books\WebDevelopmentWIthBlazor\MyBlogv2\MyBlog\MyBlog.Data\bin\Debug\net5.0\MyBlog.Data.dll" target="lib\net5.0\MyBlog.Data.dll" />
+  </files>
+</package>
