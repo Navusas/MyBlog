@@ -1,0 +1,68 @@
+﻿@page "/admin/tags"
+@using MyBlog.ServerSide.Components
+@inject IMyBlogApi api
+
+<h3>Tags</h3>
+
+<EditForm OnValidSubmit="Save" Model="TagInstance">
+	<DataAnnotationsValidator />
+	<CustomCssClassProvider ProviderType="BootstrapFieldCssClassProvider" />
+	<InputText @bind-Value="TagInstance.Name" />
+	<ValidationMessage For="@(() => TagInstance.Name)" />
+	<button class="btn btn-success" type="submit">Save</button>
+</EditForm>
+
+<ItemList Items="Tags" ItemType="Tag" DeleteEvent="@Delete" SelectEvent="@Select">
+	<ItemTemplate>
+		@{
+			var item = context as Tag;
+			if(item != null)
+			{
+				@item.Name;
+			}
+		}
+	</ItemTemplate>
+</ItemList>
+
+@code {
+	private List<Tag> Tags { get; set; } = new();
+	public Tag TagInstance { get; set; } = new();
+
+	protected async override Task OnInitializedAsync()
+	{
+		Tags = await api.GetTagsAsync();
+		await base.OnInitializedAsync();
+	}
+
+	private async Task Save()
+	{
+		try
+		{
+			if(TagInstance.Id == 0)
+			{
+				Tags.Add(TagInstance);
+			}
+			await api.SaveTagAsync(TagInstance);
+		}
+		catch { }
+	}
+
+	private async Task Delete(Tag item)
+	{
+		try
+		{
+			await api.DeleteTagAsync(item);
+			Tags.Remove(item);
+		}
+		catch { }
+	}
+	private Task Select(Tag item)
+	{
+		try
+		{
+			TagInstance = item;
+		}
+		catch { }
+		return Task.CompletedTask;
+	}
+}

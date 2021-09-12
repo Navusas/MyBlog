@@ -1,0 +1,29 @@
+﻿@page "/post/{BlogPostId:int}"
+@inject IMyBlogApi api
+@inject NavigationManager navman
+@using Markdig
+
+
+@if(BlogPost != null)
+{
+	<Title Value="@BlogPost.Title"></Title>
+	<h3>@BlogPost.Title</h3>
+	@((MarkupString) Markdig.Markdown.ToHtml(BlogPost.Text, pipeline));
+}
+
+@code {
+
+	[Parameter] public int BlogPostId { get; set; }
+	public BlogPost BlogPost { get; set; }
+	private MarkdownPipeline pipeline;
+
+	protected async override Task OnParametersSetAsync()
+	{
+		pipeline = new MarkdownPipelineBuilder()
+		.UseEmojiAndSmiley()
+		.Build();
+
+		BlogPost = await api.GetBlogPostAsync(BlogPostId);
+		await base.OnParametersSetAsync();
+	}
+}
